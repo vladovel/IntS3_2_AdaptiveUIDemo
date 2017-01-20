@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IntS3_2_AdaptiveUIDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tshirt" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-cb-MzB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1y-CN-GxF">
+                                <rect key="frame" x="0.0" y="390" width="375" height="277"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PSD T-Shirt Mockup Template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRk-oK-6Bu">
+                                        <rect key="frame" x="15" y="15" width="345" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-Jf-eNk">
+                                        <rect key="frame" x="15" y="47" width="345" height="215"/>
+                                        <string key="text">This is a free psd T-Shirt mockup provided by pixeden.com. The PSD comes with a plain simple tee-shirt mockup template. You can editthe t-shirt color and use the smart layer to apply your designs. The high-resolution makes it easy to frame specific details with close-ups.</string>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rRk-oK-6Bu" firstAttribute="top" secondItem="K1y-CN-GxF" secondAttribute="top" constant="15" id="3l0-1q-Uuc"/>
+                                    <constraint firstAttribute="trailing" secondItem="eHl-Jf-eNk" secondAttribute="trailing" constant="15" id="5vb-S7-9tY"/>
+                                    <constraint firstItem="rRk-oK-6Bu" firstAttribute="leading" secondItem="K1y-CN-GxF" secondAttribute="leading" constant="15" id="GWd-jN-T9E"/>
+                                    <constraint firstItem="eHl-Jf-eNk" firstAttribute="leading" secondItem="K1y-CN-GxF" secondAttribute="leading" constant="15" id="XRy-hE-S9B"/>
+                                    <constraint firstAttribute="bottom" secondItem="eHl-Jf-eNk" secondAttribute="bottom" constant="15" id="cYm-ec-PeH"/>
+                                    <constraint firstAttribute="trailing" secondItem="rRk-oK-6Bu" secondAttribute="trailing" constant="15" id="lfq-vH-5Np"/>
+                                    <constraint firstItem="eHl-Jf-eNk" firstAttribute="top" secondItem="rRk-oK-6Bu" secondAttribute="bottom" constant="8" id="urd-CG-e7E"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K1y-CN-GxF" secondAttribute="bottom" id="C0P-F1-09C"/>
+                            <constraint firstAttribute="trailing" secondItem="UsS-cb-MzB" secondAttribute="trailing" id="IDF-db-c4W"/>
+                            <constraint firstItem="UsS-cb-MzB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IvC-Iv-L3W"/>
+                            <constraint firstAttribute="trailing" secondItem="K1y-CN-GxF" secondAttribute="trailing" id="JEY-xZ-Cyh"/>
+                            <constraint firstItem="UsS-cb-MzB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aV2-4O-CaL"/>
+                            <constraint firstItem="UsS-cb-MzB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.585" id="ffx-If-97O"/>
+                            <constraint firstItem="K1y-CN-GxF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rUE-8Y-YMM"/>
+                            <constraint firstItem="K1y-CN-GxF" firstAttribute="top" secondItem="UsS-cb-MzB" secondAttribute="bottom" id="sBm-UB-mEw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="326" y="152"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tshirt" width="512" height="432"/>
+    </resources>
 </document>
